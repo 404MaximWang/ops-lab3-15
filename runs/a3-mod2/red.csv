@@ -1,0 +1,4 @@
+step,target_rps,server_rps,server_error_rate,server_p99_ms,server_mean_ms,inflight_avg,cpu_ms_per_req,sched_wait_p99_ms,gomaxprocs,cg_limit_cores,cg_cpu_cores,throttle_ratio,throttled_s_per_s,mem_limit_mb,mem_current_max_mb,rss_max_mb,heap_max_mb,report_inflight_max,gc_per_s
+1,10,8.64286,0,995,501.756,4.26667,1.80168,0.44,2,0,0.0155717,NaN,0,200,132.727,137.797,105.355,7,1.71429
+2,20,19.6429,0.170909,993.969,415.773,8.73333,1.145,0.615,2,0,0.0224935,NaN,0,200,181.125,186.125,153.421,11,1.85714
+3,30,31.2857,0.372146,992.036,314.78,9.8,0.766142,0.472,2,0,0.0239701,NaN,0,200,181.277,186.246,153.433,11,2
