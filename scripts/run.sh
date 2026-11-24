@@ -47,7 +47,7 @@ dir=runs/$name
 
 config=$(curl -fsS -m 5 "$SVC/config") || die "连不上 enrolld（$SVC），它启动了吗？"
 pid=$(sed -n 's/.*"pid": *\([0-9][0-9]*\).*/\1/p' <<<"$config")
-if [ -z "$pid" ] || ! kill -0 "$pid" 2>/dev/null; then
+if [ -z "$pid" ] || { ! kill -0 "$pid" 2>/dev/null && [ ! -d "/proc/$pid" ]; }; then
   die "从 /config 拿不到 enrolld 的进程号；enrolld 要和本脚本在同一台主机上"
 fi
 
